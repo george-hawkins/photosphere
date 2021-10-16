@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HDR Photosphere</title>
+
+    <!-- https://github.com/sindresorhus/github-markdown-css -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+
+    <script src="https://raw.githack.com/enkimute/hdrpng.js/master/hdrpng.min.js"></script>
+
+
+    <style>
+      .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="markdown-body">
+      <h1>HDR Photosphere</h1>
+
+      <div id="demo_hdr" style="display:block">
+        <input type="range" min="-8" max="8" step="0.1" value="1" title="Exposure" onInput="myHDR.exposure=this.value"/> Exposure<br>
+      </div>
+      <p>Depending on the processing power of your device, the image may be quite slow to update in response to changes to the <i>Exposure</i> value.</p>
+    </article>
+    <script>
+        var $=document.getElementById.bind(document);
+        var demo = $('demo_hdr');
+
+        var myHDR = new HDRImage();
+        myHDR.src = 'photosphere-1000x500.hdr';
+        myHDR.style.maxWidth='100%';
+
+        demo.appendChild(myHDR);
+    </script>
+  </body>
+</html>
