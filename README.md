@@ -14,13 +14,13 @@ When taking the photo of the cross, its necessary to hold the phone as far a way
 Throughout the process, try to maitain a consistent position relative to the phone, i.e. shuffle round with the phone for each shot rather than twisting or turning it to take the next shot.
 
 _Main camera_  
-![camera-back](camera-back.jpg)
+<a href="camera-back.jpg"><img width="256" height="384" src="camera-back.jpg"></a>
 
 _Front of phone_  
-![camera-front](camera-front.jpg)
+<a href="camera-front.jpg"><img width="256" height="384" src="camera-front.jpg"></a>
 
 _Virtual tripod_  
-![plumb-line](plumb-line.jpg)
+<a href="plumb-line.jpg"><img width="256" height="384" src="plumb-line.jpg"></a>
 
 _Resulting photosphere_  
 ![photosphere](photosphere.jpg)
