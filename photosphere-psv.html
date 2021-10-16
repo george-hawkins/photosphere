@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Photosphere with Photo Sphere Viewer</title>
+
+    <!-- https://github.com/sindresorhus/github-markdown-css -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
+
+
+    <style>
+      .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="markdown-body">
+      <h1>Photosphere with Photo Sphere Viewer</h1>
+
+      <div id="viewer" style="width: 600px; height: 400px;"></div>
+    </article>
+    <script>
+      var viewer = new PhotoSphereViewer.Viewer({
+        container: document.querySelector('#viewer'),
+        panorama: 'photosphere.jpg'
+      });
+    </script>
+  </body>
+</html>

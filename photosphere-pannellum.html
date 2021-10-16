@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Photosphere with Pannellum</title>
+
+    <!-- https://github.com/sindresorhus/github-markdown-css -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+    <style>
+      .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    </style>
+    <style>
+      #panorama {
+        width: 600px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="markdown-body">
+      <h1>Photosphere with Pannellum</h1>
+
+      <div id="panorama"></div>
+    </article>
+    <script>
+    pannellum.viewer('panorama', {
+      'type': 'equirectangular',
+      'panorama': 'photosphere.jpg',
+      'autoLoad': true
+    });
+    </script>
+  </body>
+</html>
