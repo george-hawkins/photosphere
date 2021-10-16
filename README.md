@@ -146,6 +146,18 @@ Then use the `-` and `=` keys to adjust the exposure up and down and see how the
 
 You can see the results [here](https://george-hawkins.github.io/photosphere/photosphere-hdr.html) for my photosphere, shown above, using [hdrpng.js](https://github.com/enkimute/hdrpng.js). However, it's probably best to pull [`photosphere-4000x2000.hdr`](photosphere-4000x2000.hdr) into Blender to really work with it properly.
 
+For a more capable web-based HDR viewer, see [OpenHDR Viewer](https://viewer.openhdr.org/).
+
+### Comparison
+
+Here are some comparison images generated using `pfsv`.
+
+| Details | Original LDR | Reconstructed HDR |
+|---------|--------------|-------------------|
+| -0.45 f&#8209;stops -1.5D 0.03162 | ![img.jpg](comparison/original-1.5D.jpg) | ![img.jpg](comparison/reconstructed-1.5D.jpg)
+| 0 f&#8209;stops 0D 1 | ![img.jpg](comparison/original-0D.jpg) | ![img.jpg](comparison/reconstructed-0D.jpg)
+| +0.45 f&#8209;stops +1.5D 31.62 | ![img.jpg](comparison/original+1.5D.jpg) | ![img.jpg](comparison/reconstructed+1.5D.jpg)
+
 ### Notes
 
 It took a bit of experimenting to find a combination of specific Python package versions that worked with this code. It depends on TensorFlow version 1 rather than the current version 2 and the [TensorLayer](https://github.com/tensorlayer/tensorlayer) dependency buts further constraints on what will work.
