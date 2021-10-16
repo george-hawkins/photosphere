@@ -172,13 +172,13 @@ Here are some comparison images generated using `pfsv`.
 | 0 f&#8209;stops 0D 1 | ![img.jpg](comparison/original-0D.jpg) | ![img.jpg](comparison/reconstructed-0D.jpg)
 | +0.45 f&#8209;stops +1.5D 31.62 | ![img.jpg](comparison/original+1.5D.jpg) | ![img.jpg](comparison/reconstructed+1.5D.jpg)
 
-### Notes
+### Dependencies
 
 It took a bit of experimenting to find a combination of specific Python package versions that worked with this code. It depends on TensorFlow version 1 rather than the current version 2 and the [TensorLayer](https://github.com/tensorlayer/tensorlayer) dependency buts further constraints on what will work.
 
 In the end, I found TensorFlow 1.12.3 in combination with TensorLayer 1.11.1 were the latest versions that would work. Hence, the `pip install` line used above.
 
-I froze the resulting versions for all the dependencies like so:
+I froze the resulting versions for all the dependencies into [`singlehdr-requirements.txt`](singlehdr-requirements.txt) like so:
 
 ```
 $ pip freeze > singlehdr-requirements.txt
@@ -190,7 +190,9 @@ So instead of the `pip install` line up above, you can get exactly the set of de
 $ pip install -r path/to/singlehdr-requirements.txt
 ```
 
-By looking at these dependencies, one can see that Python 3.6 was the most recent expected Python version at the time.
+### Python version
+
+By looking at the dependencies used, one can see that Python 3.6 was the most recent expected Python version at the time.
 
 I used Python 3.6.13 (installed with [pyenv](https://github.com/pyenv/pyenv) which lets you easily manage multiple Python versions) but only because I'd experienced issues using later versions of Python with some of the other projects linked to from the Awesome Deep HDR page. This code may well work fine with later versions of Python.
 
