@@ -68,7 +68,7 @@ Ricoh also have far more expensive premium end cameras but in this price categor
 
 Both the cheaper Ricoh cameras and the more expensive Insta360 cameras support HDR - which is a big plus over photosphere images created by the Google camera app if you plan to use the images for HDRIs (if your source images are single exposure images then you obviously can't call the resulting HDRI a true HDRI).
 
-There are lots of cheaper cameras from China - e.g. the [Xanes 360&deg;](https://www.banggood.com/360-Mini-WiFi-Panoramic-Video-Camera-2448P-30fps-16MP-Photo-3D-Sports-DV-VR-Video-And-Image-ABS-p-1059241.html) - but image quality and support may not be what you expect.
+There are lots of cheaper cameras from China - e.g. the [Xanes 360&deg;](https://www.banggood.com/360-Mini-WiFi-Panoramic-Video-Camera-2448P-30fps-16MP-Photo-3D-Sports-DV-VR-Video-And-Image-ABS-p-1059241.html) - but image quality and support may not be what you expect. The Xanes camera isn't true 360&deg; as it only has one lens - this fisheye can only capture 220&deg; so you end up with a sphere that's missing the 140&deg; directly behind the lens. Also, the apps used to control such cameras typically require [sideloading](https://en.wikipedia.org/wiki/Sideloading) and are not available on the official app stores.
 
 Videos
 ------
@@ -77,6 +77,14 @@ Blender Daily - [Easy HDRI creation with just a phone](https://www.youtube.com/w
 
 Clinton Jones (Pwnisher) - [Custom HDRIs for photorealism](https://www.youtube.com/watch?v=MASbLjQ9S_Y). Note that Clint constructs his HDRI in Photoshop from multiple images taken at different exposures with an Insta360 ONE R. So even though the ONE R lists HDR as a feature, Clint doesn't seem to be using this.
 
+Photosphere as Blender HDRI
+---------------------------
+
+Having watched the above two videos (the Blender Daily one in particular), I set about using my photosphere as a HDRI in Blender. I used a photosphere image with HDR data that was reconstructed as described in the next section. I got mirrored balls floating in the middle of my photosphere like this:
+
+![spheres and hdri 2](images/spheres-and-hdri-2.png)
+
+See [`in-blender.md`](in-blender.md) for all the details.
 
 Reconstructing HDR data using deep learning
 -------------------------------------------
