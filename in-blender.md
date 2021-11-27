@@ -26,17 +26,17 @@ I just described most of the step above very briefly as they're very basic opera
 Adding the HDRI
 ---------------
 
-Go to the _shading_ workspace and in the _shading editor_ change the shader type from _object_ to _world_. Add a _texture / environment texture_ node, open your HDRI and wire things up as shown:
+Go to the _Shading_ workspace and in the _Shading_ editor change the shader type from _Object_ to _World_. Add a _Texture / Environment Texture_ node, open your HDRI and wire things up as shown:
 
 ![img.png](images/environment-texture.png)
 
-This _doesn't_ affect the background if the shading for the 3D viewport is _material preview_. For that you'd need to open _viewport shading_, click the cog, add your `.hdr` file as a _light_, then click the sphere (the studio light) and select your newly added light:
+This _doesn't_ affect the background if the shading for the 3D viewport is _Material Preview_. For that you'd need to open _Viewport Shading_, click the cog, add your `.hdr` file as a _light_, then click the sphere (the studio light) and select your newly added light:
 
 ![img.png](images/studio-light.png)
 
-But you don't need to do this if you're not concerned about _material preview_.
+But you don't need to do this if you're not concerned about _Material Preview_.
 
-Now, switch to the layout workspace and to rendered viewport shading and you get a picture something like this (I removed my yellow disc as this makes for more interesting images):
+Now, switch to the _Layout_ workspace and to _Rendered_ viewport shading and you get a picture something like this (I removed my yellow disc as this makes for more interesting images):
 
 ![spheres and hdri](images/spheres-and-hdri.png)
 
@@ -46,6 +46,19 @@ It's a little confusing at first - it's important to realize that the HDRI isn't
 
 If I wanted my spheres on the table then I'd have to create a photosphere that was centered on the desired point on the table. This would be quite hard without a proper 360&deg; camera (and some creativity with tripods etc.).
 
+Adding the HDRI via properties
+------------------------------
+
+Instead of using nodes, you can add an HDRI via the _World_ properties.
+
+In the _Layout_ workspace (or any workspace), select the _World_ properties, click the yellow dot in the _Color_ field, select _Environment Texture_, then click _Open_ and select your HDRI:
+
+![img.png](world-properties.png)
+
+That's it. Remember, you have to switch to _Rendered_ viewport shading to actually see your HDRI.
+
+If you switch to the _Shading_ workspace, you'll see that we now have the same set of nodes that we created manually above. Using this approach, though, doesn't free you from nodes entirely - you'll still have to work with these nodes directly if you want to rotate the HDRI relative to your scene (see the section down below).
+
 HDR and LDR environment textures
 --------------------------------
 
@@ -53,7 +66,7 @@ Try experimenting with the original LDR photosphere `.jpg` and the `.hdr` one wi
 
 ![img.png](images/ldr-environment-texture.png)
 
-Then in the layout workspace, go to the _render properties_ tab and in the _color management_ section adjust the exposure value up and down.
+Then in the _Layout_ workspace, go to the _Render Properties_ tab and in the _Color Management_ section adjust the exposure value up and down.
 
 | Exposure | LDR | HDR |
 |----------|-----|-----|

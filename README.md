@@ -140,6 +140,16 @@ $ python test_real_refinement.py --ckpt_path ckpt_deq_lin_hal_ref/model.ckpt --t
 
 That's it - the test input image is `imgs/00000.png` and the resulting output HDR is `output_hdrs/00000.hdr`.
 
+### Scaling your input images
+
+As covered below (in the section on memory usage), reconstructing the HDRs consumes an enormous amount of memory and even with 32GiB I couldn't reconstruct 8000x4000 images. To scale the input images (and dramatically reduce the amount on memory required for HDR reconstruction) just use ImageMagick [resize](https://legacy.imagemagick.org/Usage/resize/):
+
+```
+$ convert PXL_20211121_120900645.PHOTOSPHERE.jpg -resize 4000x4000 output-4000.png
+```
+
+Note that `4000x4000` respects the aspect ratio - you end up with an image where no side is longer than 4000 pixels.
+
 ### Viewing the results
 
 The input image can be viewed with the standard system image viewer:
