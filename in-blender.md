@@ -23,6 +23,8 @@ The above scene was created, starting from the default new scene in Blender, as 
 
 I just described most of the step above very briefly as they're very basic operations. I described the denoising steps in more detail as I'm not so familiar with them (but they greatly improve the end result). For more details (and screenshots) for this step, search for "noise" in my notes [here](https://github.com/george-hawkins/blender-donut-notebook/blob/master/README.md).
 
+**Update:** denoising seems to have gotten simpler in Blender 3.0. Search for "denoise" [here](https://github.com/george-hawkins/movie-tracking) for more details.
+
 Adding the HDRI
 ---------------
 
