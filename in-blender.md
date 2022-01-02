@@ -19,7 +19,7 @@ The above scene was created, starting from the default new scene in Blender, as 
 * Set the render engine to Cycles (and the device to GPU compute).
 * Got the camera where I wanted it (just locked camera to view, zoomed in and dragged down a little to center things better).
 * Ticked denoising in the data section of the layer properties.
-* Went to the compositing workspace, ticked _use nodes_, added a _filter / denoise_ node between the render and composite nodes and wired image, alpha and depth from the render node to, respectively, the image, normal and albedo inputs of the denoise node and wired its image output to the image input of the composite node.
+* Went to the compositing workspace, ticked _use nodes_, added a _filter / denoise_ node between the render and composite nodes and wired noisy image, denoising normal and denoising albedo from the render node to, respectively, the image, normal and albedo inputs of the denoise node and wired its image output to the image input of the composite node.
 
 I just described most of the step above very briefly as they're very basic operations. I described the denoising steps in more detail as I'm not so familiar with them (but they greatly improve the end result). For more details (and screenshots) for this step, search for "noise" in my notes [here](https://github.com/george-hawkins/blender-donut-notebook/blob/master/README.md).
 
