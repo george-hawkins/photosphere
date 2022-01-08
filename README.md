@@ -213,6 +213,8 @@ By looking at the dependencies used, one can see that Python 3.6 was the most re
 
 I used Python 3.6.13 (installed with [pyenv](https://github.com/pyenv/pyenv) which lets you easily manage multiple Python versions) but only because I'd experienced issues using later versions of Python with some of the other projects linked to from the Awesome Deep HDR page. This code may well work fine with later versions of Python.
 
+**Update:** the necessary dependencies are not all available for 3.9.5, so this version of Python definitely won't work. I haven't tried any additional versions between 3.6.13 and 3.9.5.
+
 ### Memory usage
 
 I have a system with 32GiB of RAM. However, this doesn't seem to be enough to handle the 8000x4000 photosphere images that the Google camera app on my Pixel 4a produces.
