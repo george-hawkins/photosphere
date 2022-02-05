@@ -83,4 +83,24 @@ You can rotate the environment texture relative to your scene - add an _input / 
 
 ![img.png](images/rotate-environment-texture.png)
 
-Adjusting anything other than the z rotation value probably isn't very useful but try it (making sure you're not currently looking at the world thru the camera). Adjusting x and y results in tilting your photosphere world relative to your scene world. Adjusting location can work a little but quickly results in massive distortion (as noted already, the photosphere isn't a real 3D scene). And scale is pointless unless you want to squash or expand one of the dimensions of your photosphere relative to the others.
+Adjusting anything other than the z rotation value probably isn't very useful but try it (making sure you're not currently looking at the world thru the camera). Adjusting x and y rotation results in tilting your photosphere world relative to your scene world. Adjusting location can work a little but quickly results in massive distortion (as noted already, the photosphere isn't a real 3D scene). And scale is pointless unless you want to squash or expand one of the dimensions of your photosphere relative to the others.
+
+**Update:** people actually do seem to adjust location to essentially zoom in, despite its distorting effects. When it's not directly used as a background perhaps this is less of an issue (i.e. when you've made it transparent and its informing just lighting and reflections). E.g. see [here](https://www.youtube.com/watch?v=hymtATx1QXw&t=914s) (15m 14s into CG Geek's "Add CGI Characters to Live Footage" tutorial) and in this Blender StackExchange [answer](https://blender.stackexchange.com/a/49046/124535).
+
+An alternative (as suggested in the next answer to the same StackExchange question) is to adjust the camera focal length:
+
+* Press `Numpad-0` to enter camera view.
+* Right click and select _Adjust Focal Length_.
+* Don't click again (this confused me at first), on releasing the LMB (after clicking _Adjust Focal Length_), simply move the mouse left or right to zoom out or in.
+
+Or simply go to the _Object Data_ properties for the camera and adjust its _Focal Length_ value there.
+
+PS to adjust the size of the camera view itself, either press _Home_ to expand it to fill the viewport or untick _Lock Camera to View_ and then adjust with the mouse wheel.
+
+Adjusting the focal length obviously has consequences for everything in the scene, e.g. see how the sphere nearest to the camera has become egg shaped:
+
+![img.png](images/3mm-focal-length.png)
+
+Whereas if you adjust location, you get a far less dramatic effect:
+
+![img.png](images/location-0.85m.png)
